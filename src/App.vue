@@ -1,4 +1,16 @@
 <script setup>
+
+import { ref, computed } from 'vue';
+
+const player = ref('x');
+const board = ref([
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+])
+
+
+
 </script>
 
 <template>
