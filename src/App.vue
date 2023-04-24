@@ -41,6 +41,15 @@ const MakeMove = (x, y) => {
   player.value = player.value === 'X' ? 'O' : 'X'
 }
 
+const ResetGame = () => {
+  board.value = [
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', '']
+  ]
+
+  player.value = 'x'
+}
 
 
 
