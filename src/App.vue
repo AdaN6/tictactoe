@@ -83,6 +83,9 @@ const ResetGame = () => {
       Player '{{ winner }}' wins!
     </h2>
 
+    <button class="px-4 py-2 bg-pink-500 rounded uppercase font-bold hover:bg-pink-600"> Reset </button>
+
+
   </main>
     
 </template>
