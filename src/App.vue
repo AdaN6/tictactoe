@@ -64,6 +64,21 @@ const ResetGame = () => {
     <h3 class="text-xl mb-4">
       Player {{ player }}'s turn'
     </h3>
+
+    <div class="flex flex-col items-center mb8">
+      <div 
+        v-for="(row, x) in board"
+        :key="x"
+        class="flex">
+          <div v-for="(cell, y) in row"
+          :key="y"
+          @click="MakeMove(x,y)"
+          :class="`border border-white w-20 h-20 hover:bg-gray-700 flex items-center justify-center text-4xl cursor-pointer`">
+
+          </div>
+
+      </div>
+    </div>
   </main>
     
 </template>
