@@ -73,7 +73,7 @@ const ResetGame = () => {
           v-for="(cell, y) in row"
           :key="y"
           @click="MakeMove(x, y)"
-          :class="`border border-white w-20 h-20 hover:bg-gray-700 flex items-center justify-center text-4xl cursor-pointer material-icons-outlined`">
+          :class="`border border-white w-20 h-20 hover:bg-gray-700 flex items-center justify-center text-4xl cursor-pointer material-icons-outlined ${cell === 'X' ? 'text-pink-500' : 'text-blue-400'}`">
             {{ cell === 'X' ? 'close' : cell === 'O' ? 'circle' : '' }}
           </div>
       </div>
