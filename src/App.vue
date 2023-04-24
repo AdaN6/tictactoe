@@ -76,9 +76,13 @@ const ResetGame = () => {
           :class="`border border-white w-20 h-20 hover:bg-gray-700 flex items-center justify-center text-4xl cursor-pointer material-icons-outlined`">
             {{ cell === 'X' ? 'close' : cell === 'O' ? 'circle' : '' }}
           </div>
-
       </div>
     </div>
+
+    <h2 v-if="winner" class="text-6xl font-bold mb-8">
+      Player '{{ winner }}' wins!
+    </h2>
+
   </main>
     
 </template>
