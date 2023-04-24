@@ -57,7 +57,7 @@ const ResetGame = () => {
 
 <template>
   
-  <main class="pt-8 text-center ">
+  <main class="pt-8 text-center dark:bg-gray-800 min-h-screen dark:text-white">
     <h1 class="mb-8 text-3xl font-bold uppercase">
       Tic Tac Toe
     </h1>
