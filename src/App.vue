@@ -33,13 +33,12 @@ const winner = computed(() => CalculateWinner(board.value.flat()))
 
 const MakeMove = (x, y) => {
   if (winner.value) return
-
   if (board.value[x][y] !== '') return
-  
   board.value[x][y] = player.value
-
   player.value = player.value === 'X' ? 'O' : 'X'
 }
+
+
 
 const ResetGame = () => {
   board.value = [
@@ -65,16 +64,17 @@ const ResetGame = () => {
       Player {{ player }}'s turn'
     </h3>
 
-    <div class="flex flex-col items-center mb8">
+    <div class="flex flex-col items-center mb-8">
       <div 
-        v-for="(row, x) in board"
-        :key="x"
-        class="flex">
-          <div v-for="(cell, y) in row"
+        v-for="(row, x) in board" 
+  				:key="x"
+  				class="flex">
+          <div 
+          v-for="(cell, y) in row"
           :key="y"
-          @click="MakeMove(x,y)"
-          :class="`border border-white w-20 h-20 hover:bg-gray-700 flex items-center justify-center text-4xl cursor-pointer materials-icons-outlined`">
-
+          @click="MakeMove(x, y)"
+          :class="`border border-white w-20 h-20 hover:bg-gray-700 flex items-center justify-center text-4xl cursor-pointer material-icons-outlined`">
+            {{ cell === 'X' ? 'close' : cell === 'O' ? 'circle' : '' }}
           </div>
 
       </div>
